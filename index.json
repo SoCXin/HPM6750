@@ -1,22 +1,22 @@
 {
-    "type":"MCU",
+    "type":"SoC",
     "name":"ZSL420",
-    "series":["ZSL420","CH548"],
+    "series":["ZSL420","ZSL421"],
     "price":[4,6],
-    "description":"WCH 1T 8051 MCU",
+    "description":"ZLG Cortex M0 LoRa SoC",
     "peripheral": ["TIM","ADC","USB","UART","SPI","LDO","PWM"],
     "package":["LQFP48","QFN28","SOP16"],
     "encryption": ["UID"],
     "manufacturer": {
-        "vendor":"WCH",
-        "homepage": "http://www.wch.cn/products/ZSL420.html"
+        "vendor":"ZLG",
+        "homepage": "https://www.zlg.cn/wireless/wireless/product/id/265.html"
     },
     "url":"http://www.SoC.xin/ZSL420",
     "repo":"https://github.com/SoCXin/ZSL420",
     "version":"1.2.0",
     "Core": {
         "num": 1,
-        "architecture":"MCS51",
+        "architecture":"Cortex M0",
         "Freq":[8,48]
     },
     "TIM": {
