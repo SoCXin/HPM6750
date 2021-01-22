@@ -7,20 +7,19 @@
 #### [Level](https://github.com/SoCXin/Level)：48MHz
 ## [简介](https://github.com/SoCXin/ZSL420/wiki)
 
-[ZSL420](https://github.com/SoCXin/ZSL420) 兼容MCS51的增强型E8051内核，79%指令是单字节单周期指令，3KB BootLoader + 60KB CodeFlash，2K xRAM + 256B iRAM，1K DataFlash。
+[ZSL420](https://github.com/SoCXin/ZSL420)是致远电子自主研发的LoRa智能组网芯片。该产品集成无线收发器，超低功耗MCU，射频收发匹配电路和滤波电路。支持自组网透传协议、LoRaNET、LoRaWAN、LinkWAN、CLAA等软件组网协议。且芯片支持二次开发，拥有256K字节Flash，32K字节SRAM，45个通用IO口，多个SPI,IIC,UART数字接口，内置ADC,DAC等模拟外设，支持AES-256硬件加密。
 
-支持 USB-Host主机模式和 USB-Device设备模式，内置FIFO支持最大64字节数据包,支持DMA，支持 USB 2.0 全速 12Mbps，支持USB PD和Type-C。
 
-通信接口包括4组异步串口、8路PWM和16通道电容触摸按键，其它包括1路主从SPI，16路12位ADC，支持电压比较；内置3组定时器和3路信号捕捉。
-
-[![sites](docs/ZSL420.png)](http://www.wch.cn/products/ZSL420.html)
+[![sites](docs/ZSL420.png)](https://www.zlg.cn/wireless/wireless/product/id/265.html)
 
 #### 关键特性
 
-* Type-C CC控制,支持[USB-PD](https://github.com/Qful/PD)
-* USB全速主/从模式
-* UART x 4 + SPI (M/S)
-* 16通道12位ADC，支持电压比较
+*  470MHz∼510MHz无线收发器，-9dBm∼21dBm@Step1dB
+* 45个通用管脚
+* 12位ADC
+* 6位DAC
+* OPA+CMP
+* LGA68
 
 ### [资源收录](https://github.com/SoCXin/ZSL420)
 
@@ -30,6 +29,6 @@
 
 ### [选型建议](https://github.com/SoCXin)
 
-[ZSL420](https://github.com/SoCXin/ZSL420) 特色支持Type-C和USB-PD，4串口满足数据传输需求。
+[ZSL420](https://github.com/SoCXin/ZSL420) 主要是支持LoRa通信
 
 ###  [www.SoC.xin(芯)](http://www.SoC.Xin)
