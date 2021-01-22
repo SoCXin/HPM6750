@@ -1,0 +1,15 @@
+{
+    "type":"MCU",
+    "name":"ZSL420",
+    "package":["LQFP48","QFN28"],
+    "QFN28": {
+        "name":"ZSL420F",
+        "peripheral": ["ADC","TIM","UART1","UART2","I2C","SPI","PWM"],
+        "GPIO":7
+    },
+    "LQFP48": {
+        "name":"ZSL420L",
+        "peripheral": ["ADC","TIM","UART1","UART2","I2C","SPI","PWM"],
+        "GPIO":18
+    }
+}
