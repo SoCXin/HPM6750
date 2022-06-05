@@ -19,27 +19,67 @@ jobs:
         fetch-depth: 1
 
     - name: cppcheck
-      uses: Qful/check-action@master
+      uses: deep5050/cppcheck-action@main
       with:
-        github_token: ${{ secrets.SOC_XIN_TOCKEN }}
-        enable: all
-        inconclusive: disable
-        inline_suppression: disable
-        force_language: c
-        force: enable
-        max_ctu_depth: 2
-        std: c99
-        output_file: ./codecheck.txt
-        other_options: --bug-hunting --verbose --std=c99
+        github_token: ${{ secrets.SOC_XIN_TOCKEN}}
 
-    - name: report
-      uses: Qful/check-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.SOC_XIN_TOCKEN }}
-        BRANCH_NAME: 'master'
+    # - name: cppcheck
+    #   uses: Qful/check-action@master
+    #   with:
+    #     github_token: ${{ secrets.SOC_XIN_TOCKEN }}
+    #     enable: all
+    #     inconclusive: disable
+    #     inline_suppression: disable
+    #     force_language: c
+    #     force: enable
+    #     max_ctu_depth: 2
+    #     std: c99
+    #     output_file: ./codecheck.txt
+    #     other_options: --bug-hunting --verbose --std=c99
 
-    - name: Upload
-      uses: actions/upload-artifact@v2
-      with:
-        name: code_check_report
-        path: codecheck.txt
+    # - name: report
+    #   uses: Qful/check-action@master
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.SOC_XIN_TOCKEN }}
+    #     BRANCH_NAME: 'master'
+
+    # - name: Upload
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: code_check_report
+    #     path: codecheck.txt
+
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        items:
+          - "hpm_sdk"
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Check out
+        uses: actions/checkout@v2
+        with:
+          submodules: "recursive"
+          fetch-depth: 1
+
+      - name: Install tools
+        run: |
+          sudo apt install build-essential cmake ninja-build libc6-i386 libc6-i386-cross libstdc++6-i386-cross
+          sudo apt install python3 python3-pip
+          export HPM_SDK_BASE=src/hpm_sdk
+          pip3 install --user -r "$HPM_SDK_BASE/scripts/requirements.txt"
+
+      # - name: Build demo
+      #   if: success()
+      #   working-directory: src
+      #   run: |
+      #     make -C ${{ matrix.items }}
+
+      # - uses: actions/upload-artifact@v2
+      #   if: success()
+      #   with:
+      #     name: build_project
+      #     path: project/${{ matrix.items }}
+

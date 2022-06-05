@@ -3,7 +3,7 @@
 [![Build Status](https://github.com/SoCXin/HPM6750/workflows/demo/badge.svg)](https://github.com/SoCXin/HPM6750/actions/workflows/demo.yml)
 
 * [先楫](https://www.hpmicro.com/)：[RISC-V](https://github.com/SoCXin/RISC-V)
-* [L6R6](https://github.com/SoCXin/Level)：9220 CoreMark @ 800 MHz
+* [L6R6](https://github.com/SoCXin/Level)：9220 CoreMark @ 816 MHz
 
 
 ## [简介](https://docs.soc.xin/HPM6750)
@@ -29,6 +29,7 @@
 * [参考资源](src/)
 * [参考文档](docs/)
 * [参考工程](project/)
+* [HPM SDK](https://github.com/hpmicro/hpm_sdk)
 
 
 ### [选型建议](https://github.com/SoCXin)
