@@ -1,4 +1,0 @@
-excluded_targets:
-  - debug
-  - release
-  - flash_uf2

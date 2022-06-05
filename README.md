@@ -1,6 +1,7 @@
 ﻿# [HPM6750](https://docs.soc.xin/HPM6750)
 
 [![Build Status](https://github.com/SoCXin/HPM6750/workflows/demo/badge.svg)](https://github.com/SoCXin/HPM6750/actions/workflows/demo.yml)
+[![Build Status](https://github.com/SoCXin/HPM6750/workflows/sdk/badge.svg)](https://github.com/SoCXin/HPM6750/actions/workflows/sdk.yml)
 
 * [先楫](https://www.hpmicro.com/)：[RISC-V](https://github.com/SoCXin/RISC-V)
 * [L6R6](https://github.com/SoCXin/Level)：9220 CoreMark @ 816 MHz
