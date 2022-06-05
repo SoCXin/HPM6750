@@ -1,9 +1,15 @@
 name: sdk
 
+# on:
+#   push:
+#     paths:
+#       - 'sdk.yml'
 on:
   push:
-    paths:
-      - 'sdk.yml'
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
 
 jobs:
   build:

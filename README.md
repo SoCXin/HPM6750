@@ -9,7 +9,7 @@
 
 ## [简介](https://docs.soc.xin/HPM6750)
 
-[HPM6750](https://github.com/SoCXin/HPM6750)
+[HPM6750](https://github.com/SoCXin/HPM6750) 定位MCU，是高性能产品的代表，性能表现超过Cortex M7
 
 #### 关键特性
 
