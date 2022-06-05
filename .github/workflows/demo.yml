@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'project/**'
+      - 'src/**'
       - '**.yml'
 
 jobs:
@@ -11,7 +12,7 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-    - name: Check out
+    - name: Checkout
       uses: actions/checkout@v2
       with:
         submodules: "recursive"
@@ -27,9 +28,9 @@ jobs:
         force_language: c
         force: enable
         max_ctu_depth: 2
-        std: c11
+        std: c99
         output_file: ./codecheck.txt
-        other_options: --bug-hunting --verbose --std=c11
+        other_options: --bug-hunting --verbose --std=c99
 
     - name: report
       uses: Qful/check-action@master
